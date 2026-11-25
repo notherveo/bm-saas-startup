@@ -15,21 +15,27 @@ const tabs = [
   { id: "settings", label: "Settings", icon: Settings },
 ];
 
-const widget = (
-  id: string,
-  title: string,
-  icon: React.ComponentType<{ className?: string }>,
-  color: string,
-  data: number[],
-  spark = false
-) => {
+const Widget = ({
+  title,
+  icon: Icon,
+  color,
+  data,
+  spark = false,
+}: {
+  id: string;
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  data: number[];
+  spark?: boolean;
+}) => {
   const reduced = useReducedMotion();
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className={cn("size-8 rounded-lg bg-white/10", color)}>
-            <icon className="size-4" />
+            <Icon className="size-4" />
           </span>
           <h3 className="text-sm font-medium">{title}</h3>
         </div>
@@ -68,7 +74,18 @@ const widget = (
   );
 };
 
-const chart = (id: string, title: string, icon: React.ComponentType<{ className?: string }>, color: string, data: { label: string; value: number }[]) => {
+const Chart = ({
+  title,
+  icon: Icon,
+  color,
+  data,
+}: {
+  id: string;
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  data: { label: string; value: number }[];
+}) => {
   const reduced = useReducedMotion();
   const max = Math.max(...data.map((d) => d.value));
   return (
@@ -76,7 +93,7 @@ const chart = (id: string, title: string, icon: React.ComponentType<{ className?
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className={cn("size-8 rounded-lg bg-white/10", color)}>
-            <icon className="size-4" />
+            <Icon className="size-4" />
           </span>
           <h3 className="text-sm font-medium">{title}</h3>
         </div>
@@ -198,7 +215,7 @@ export default function ProductDemo() {
         <div className="p-6">
           <div className="grid gap-6 md:grid-cols-2">
             {widgets.map((w) => (
-              <widget
+              <Widget
                 key={w.id}
                 id={w.id}
                 title={w.title}
@@ -209,7 +226,7 @@ export default function ProductDemo() {
               />
             ))}
             {charts.map((c) => (
-              <chart
+              <Chart
                 key={c.id}
                 id={c.id}
                 title={c.title}
