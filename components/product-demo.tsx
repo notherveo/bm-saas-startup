@@ -16,6 +16,56 @@ const tabs = [
   { id: "settings", label: "Settings", icon: Settings },
 ];
 
+const widgets = [
+  {
+    id: "requests",
+    title: "Requests / s",
+    icon: Activity,
+    color: "text-emerald-400",
+    data: [12, 18, 15, 22, 30, 26, 34, 28],
+  },
+  {
+    id: "latency",
+    title: "p95 latency",
+    icon: SunDim,
+    color: "text-cyan-400",
+    data: [8, 12, 10, 14, 11, 16, 13, 9],
+  },
+];
+
+const charts = [
+  {
+    id: "traffic",
+    title: "Traffic",
+    icon: BarChart3,
+    color: "text-violet-400",
+    data: [
+      { label: "Mon", value: 12 },
+      { label: "Tue", value: 19 },
+      { label: "Wed", value: 14 },
+      { label: "Thu", value: 24 },
+      { label: "Fri", value: 21 },
+      { label: "Sat", value: 9 },
+      { label: "Sun", value: 15 },
+    ],
+  },
+  {
+    id: "errors",
+    title: "Errors",
+    icon: Activity,
+    color: "text-rose-400",
+    data: [
+      { label: "Mon", value: 4 },
+      { label: "Tue", value: 2 },
+      { label: "Wed", value: 6 },
+      { label: "Thu", value: 3 },
+      { label: "Fri", value: 1 },
+      { label: "Sat", value: 2 },
+      { label: "Sun", value: 0 },
+    ],
+  },
+];
+
 const Widget = ({
   title,
   icon: Icon,
