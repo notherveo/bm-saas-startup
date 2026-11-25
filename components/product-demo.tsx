@@ -2,16 +2,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import {
-  Activity,
-  BarChart3,
-  CalendarDays,
-  ChevronDown,
-  ChevronUp,
-  LayoutDashboard,
-  MessageSquare,
-  Settings,
-} from "lucide-react";
+import { Activity, BarChart3, CalendarDays, ChevronDown, ChevronUp, LayoutDashboard, MessageSquare, Settings, ArrowRight, SunDim } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import DashboardMock from "./dashboard-mock";
 

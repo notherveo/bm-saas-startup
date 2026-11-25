@@ -1,4 +1,7 @@
 "use client";
+import { useState } from "react";
+import { useReducedMotion } from "motion/react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {

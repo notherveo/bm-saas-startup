@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { useInView, useMotionValue, useSpring } from "motion/react";
+import { useInView, useMotionValue, useReducedMotion, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export function Counter({

@@ -1,21 +1,8 @@
 "use client";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
-import {
-  Activity,
-  BarChart3,
-  CalendarDays,
-  ChevronDown,
-  ChevronUp,
-  Clock,
-  LayoutDashboard,
-  MessageSquare,
-  Settings,
-  Sun,
-  SunDim,
-  TrendingUp,
-} from "lucide-react";
+import { Activity, BarChart3, CalendarDays, ChevronDown, ChevronUp, Clock, LayoutDashboard, MessageSquare, Settings, Sun, SunDim, TrendingUp, ArrowRight } from "lucide-react";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },

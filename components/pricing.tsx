@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 
 const tiers = [
