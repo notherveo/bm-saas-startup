@@ -3,11 +3,11 @@ import { useRef, useEffect } from "react";
 import { useReducedMotion } from "motion/react";
 
 export default function Aurora() {
-  const canvas = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const reduced = useReducedMotion();
   useEffect(() => {
     if (reduced) return;
-    const canvas = canvas.current;
+    const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -82,7 +82,7 @@ export default function Aurora() {
   }, [reduced]);
   return (
     <canvas
-      ref={canvas}
+      ref={canvasRef}
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 z-0"
     />
