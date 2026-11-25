@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Activity, BarChart3, CalendarDays, ChevronDown, ChevronUp, LayoutDashboard, MessageSquare, Settings, ArrowRight, SunDim } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import DashboardMock from "./dashboard-mock";
+import * as React from "react";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
